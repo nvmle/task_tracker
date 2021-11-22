@@ -1,5 +1,5 @@
 import tasks from "./fake.api/tasks.api";
-import { taskBoards } from "./fake.api/tasksBoadrs.api";
+import taskBoards from "./fake.api/tasksBoadrs.api";
 
 const api = {
   tasks,

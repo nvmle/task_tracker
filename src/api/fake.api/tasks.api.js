@@ -43,7 +43,7 @@ const fetchAll = () =>
   new Promise((resolve) => {
     window.setTimeout(function () {
       resolve(tasks);
-    }, 0);
+    }, 1000);
   });
 
 export default {
