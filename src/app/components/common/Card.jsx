@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const CardWrapper = ({ children }) => {
   return (
-    <div className="card">
+    <div className="card mb-2">
       <div className="card-body">{children}</div>
     </div>
   );

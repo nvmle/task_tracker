@@ -2,8 +2,24 @@ import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import LoginForm from "../components/ui/loginForm";
 import RegisterForm from "../components/ui/registerForm";
+import { useCard } from "../hooks/useCard";
 
 const Login = () => {
+  // const [userCards, setUserCards]
+  const { getCard, getUserCards } = useCard();
+
+  // console.log("userCards", userCards);
+
+  const arrayCardsId = [1];
+
+  async function getCardd() {
+    const card = await getCard(1);
+    console.log(card);
+    await getUserCards(arrayCardsId);
+  }
+
+  getCardd();
+
   const { type } = useParams();
   const [formType, setFormType] = useState(
     type === "registration" ? type : "login"

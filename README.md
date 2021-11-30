@@ -68,3 +68,44 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### Общее описание проекта
+
+Главная страница
+Путь "/" и "/main"
+Отображается сверху NavBar.
+Ниже в контейнере карточки с задачками и фильтрация.
+
+API:
+
+USER API
+
+id - id пользователя string
+name - имя пользователя string
+login - логин пользователя string
+email - электонная почта пользователя
+password - пароль пользователя string
+userCardsId - id карточек, которые может видеть пользователь [string]
+
+CARD API
+
+id - id картоки string
+title - название карточки string
+description - описание карточки string
+ownerId - id пользователя, который создал карточку, владелец string
+isShared - шарится ли на других карточка, boolean
+bookmark - закладка, для фильтрации boolean
+label - тег карточки, типа рабочего стола, для фильтрации (личное, работа, фывфыв, фывфы, название11). эти теги создаются отдельно как в гуглкипе
+usersId - id пользователей кто видит карточку и может с ней работать
+tasksId - id задачек, которые относятся к этой карточке
+
+TASK API
+
+id - id задачи string
+title - название задачи string
+description - описание задачи string
+ownerId - id пользователя, который создал задачу, владелец string
+belongsToCardId - id карточки, к которой принадлежит задача string
+isDone - выполнено ли bool
+deadline - время, когда нужно выполнить задачку date
+importance - tags - теги, [obj] срочно-важно, не срочно-важно, не срочно-важно, не срочно-не важно

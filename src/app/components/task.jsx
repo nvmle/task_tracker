@@ -3,21 +3,19 @@ import React from "react";
 import PropTypes from "prop-types";
 import CheckBoxField from "./forms/checkBoxField";
 import CardWrapper from "./common/Card";
+import Tag from "./common/tag";
 
 const Task = ({ task }) => {
-  console.log(task);
-
-  // const params = useParams();
-  // const { taskId } = params;
-  // console.log("params", params);
-
-  // console.log(taskId);
-
-  // return <h1>Task {taskId}</h1>;
   return (
     <CardWrapper>
-      <CheckBoxField />
-      {task.title}
+      <div className="row gutters-sm">
+        <div className="col-md-3 mb-3">
+          <CheckBoxField>{task.title}</CheckBoxField>
+          <p>{task.description}</p>
+          <p>{task.deadline}</p>
+          <Tag label={task.importance.name} color={task.importance.color} />
+        </div>
+      </div>
     </CardWrapper>
   );
 };

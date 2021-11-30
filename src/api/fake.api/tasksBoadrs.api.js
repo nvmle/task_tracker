@@ -1,7 +1,7 @@
 export const taskBoards = {
   private: {
     id: 1,
-    title: "Личная доска"
+    title: "Личная sssssssssssдоска"
   },
   work: {
     id: 2,
