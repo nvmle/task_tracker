@@ -1,4 +1,6 @@
 {
   "port": 8080,
-  "mongoUri": "mongodb+srv://vladimir:task-tracker-node+react@cluster0.1ljjo.mongodb.net/task-tracker?retryWrites=true&w=majority"
+  "mongoUri": "mongodb+srv://vladimir:task-tracker-node+react@cluster0.1ljjo.mongodb.net/task-tracker?retryWrites=true&w=majority",
+  "accessSecret": "super puper secret key",
+  "refreshSecret": "super puper refresh key"
 }
